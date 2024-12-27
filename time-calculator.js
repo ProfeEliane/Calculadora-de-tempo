@@ -27,6 +27,18 @@ const TimeCalculator = () => {
         <CardTitle>Calculadora de Tempo do Professor</CardTitle>
       </CardHeader>
       <CardContent>
+        <div className="flex items-center justify-between">
+          <label className="text-sm">Porcentagem de Automação:</label>
+          <input
+            type="number"
+            className="w-20 p-2 border rounded"
+            value={automationPercentage}
+            onChange={(e) => handleChangeAutomation(e.target.value)}
+            min="0"
+            max="100"
+          />
+          <span className="text-sm ml-2">%</span>
+        </div>
         <div className="space-y-4">
           <div className="grid gap-4">
             <div className="flex items-center justify-between">
